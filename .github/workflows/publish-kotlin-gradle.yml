@@ -23,5 +23,5 @@ jobs:
       - name: Publish package
         run: ./gradlew publish
         env:
-          USERNAME: ${{ secrets GRADLE_PACKAGES_USERNAME }}
+          USERNAME: ${{ secrets.GRADLE_PACKAGES_USERNAME }}
           TOKEN: ${{ secrets.GRADLE_PACKAGES_TOKEN }}
