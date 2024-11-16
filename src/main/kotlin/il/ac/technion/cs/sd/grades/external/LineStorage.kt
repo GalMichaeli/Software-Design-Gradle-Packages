@@ -7,7 +7,7 @@ class LineStorage {
 
         /** Append a line to the end of the file */
         fun appendLine(line: String) {
-            lineList.addLast(line)
+            lineList.add(line)
         }
 
         /**

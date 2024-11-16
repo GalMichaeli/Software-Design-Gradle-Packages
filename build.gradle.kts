@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.20"
+    `maven-publish`
 
 }
 
@@ -18,11 +19,16 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/GalMichaeli/Software-Design-Gradle-Packages"
+            url = uri("https://maven.pkg.github.com/GalMichaeli/Software-Design-Gradle-Packages")
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = "GalMichaeli"
+                password = "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"
             }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
         }
     }
 }
