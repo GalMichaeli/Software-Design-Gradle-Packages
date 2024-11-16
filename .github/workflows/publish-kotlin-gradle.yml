@@ -1,4 +1,4 @@
-name: "Publish package to GitHub Packages"
+name: Publish package to GitHub Packages
 on: push
 jobs:
   publish:
@@ -12,11 +12,11 @@ jobs:
         with:
           java-version: "21"
           distribution: "adopt"
-      - name: "Validate Gradle Wrapper"
+      - name: Validate Gradle Wrapper
         uses: gradle/actions/wrapper-validation@v3
-      - name: "Publish Package"
+      - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-        with:
-          arguments: publish
-        env:
+      - name: Publish
+      - env:
           TOKEN: ${{ secrets.GRADLE_PACKAGES_TOKEN }}
+      - run: ./gradlew publish
