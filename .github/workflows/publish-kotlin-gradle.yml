@@ -21,7 +21,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Publish package
-        run: mvn --batch-mode deploy
+        run: ./gradlew publish
         env:
           USERNAME: ${{ secrets.GRADLE_PACKAGES_USERNAME }}
           TOKEN: ${{ secrets.GRADLE_PACKAGES_TOKEN }}
