@@ -8,10 +8,10 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Java
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          java-version: "11"
+          java-version: "21"
           distribution: "temurin"
 
       - name: Validate Gradle Wrapper
@@ -23,5 +23,4 @@ jobs:
       - name: Publish package
         run: ./gradlew publish
         env:
-          USERNAME: ${{ secrets.GRADLE_PACKAGES_USERNAME }}
-          TOKEN: ${{ secrets.GRADLE_PACKAGES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
