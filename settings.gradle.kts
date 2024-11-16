@@ -1,2 +1,2 @@
-rootProject.name = "StorageLibrary"
+rootProject.name = "storage-library"
 

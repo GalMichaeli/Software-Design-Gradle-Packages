@@ -6,7 +6,6 @@ plugins {
 
 group = "il.ac.technion.cs.sd"
 version = "1.0"
-artifactid = "software-design-gradle-packages"
 
 repositories {
     mavenCentral()
