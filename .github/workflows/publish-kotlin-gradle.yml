@@ -19,4 +19,5 @@ jobs:
       - name: Publish
       - env:
           TOKEN: ${{ secrets.GRADLE_PACKAGES_TOKEN }}
+          USER: "GalMichaeli"
       - run: ./gradlew publish
