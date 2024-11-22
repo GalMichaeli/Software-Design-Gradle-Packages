@@ -32,7 +32,3 @@ publishing {
         }
     }
 }
-
-tasks.test {
-    useJUnitPlatform()
-}

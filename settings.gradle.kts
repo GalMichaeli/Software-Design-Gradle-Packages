@@ -1,2 +1,2 @@
-rootProject.name = "storage-library"
+rootProject.name = "grades-external"
 
